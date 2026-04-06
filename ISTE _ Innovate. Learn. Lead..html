@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://rutvanj.github.io/miniproject-bwd/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTE | Innovate. Learn. Lead.</title>
+    <link rel="stylesheet" href="./ISTE _ Innovate. Learn. Lead._files/all.min.css">
+    <link rel="stylesheet" href="./ISTE _ Innovate. Learn. Lead._files/style.css">
+    <style>
+        /* Landing Page Specific Styles */
+        body {
+            overflow: hidden;
+            /* Hide scrollbar for the landing page */
+        }
+
+        .landing-hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(11, 29, 58, 0.95) 0%, rgba(2, 132, 199, 0.85) 100%);
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .landing-content {
+            z-index: 2;
+            animation: fadeIn 1.5s ease-out;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .university-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .university-logos img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+        }
+
+        .logo-large {
+            font-size: 5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+        }
+
+        .logo-large span {
+            color: var(--secondary-color);
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            color: #e2e8f0;
+        }
+
+        .enter-btn {
+            font-size: 1.25rem;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.4);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .enter-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(14, 165, 233, 0.6);
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .enter-btn:hover i {
+            transform: translateX(5px);
+        }
+
+        .enter-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        /* Abstract Shapes */
+        .shape {
+            position: absolute;
+            filter: blur(80px);
+            z-index: 1;
+            opacity: 0.6;
+        }
+
+        .shape-1 {
+            top: -10%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            animation: float 8s infinite alternate;
+        }
+
+        .shape-2 {
+            bottom: -20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            animation: float 10s infinite alternate-reverse;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(30px, 30px);
+            }
+        }
+
+        /* Loading overlay */
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--primary-color);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            border-top-color: var(--secondary-color);
+            animation: spin 1s linear infinite;
+        }
+
+        .loader-wrapper.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Initial Loading Animation -->
+    <div class="loader-wrapper fade-out" id="loader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Main Landing Section -->
+    <main class="landing-hero">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+
+        <div class="landing-content">
+            <div class="university-logos">
+                <img src="./ISTE _ Innovate. Learn. Lead._files/cvmu-logo.png" alt="CVM University Logo">
+                <img src="./ISTE _ Innovate. Learn. Lead._files/iste-logo.png" alt="ISTE Logo">
+                <img src="./ISTE _ Innovate. Learn. Lead._files/adit-logo.png" alt="ADIT Logo">
+            </div>
+            <h1 class="logo-large" style="font-size: 3.5rem;">ISTE Student Chapter <br><span>ADIT</span></h1>
+            <p class="tagline" style="margin-bottom: 1.5rem;">Innovate. Learn. Build.</p>
+            <p style="font-size: 1.15rem; color: #e2e8f0; margin-bottom: 3rem; max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                A student-driven technical community of ADIT under CVMU, focused on skill development, innovation, and practical learning.
+            </p>
+            <a href="https://rutvanj.github.io/miniproject-bwd/main.html" class="enter-btn">
+                Enter Website <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </main>
+
+    <script>
+        // Removes loading overlay after page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('fade-out');
+            }, 800);
+        });
+    </script>
+
+
+</body></html>
